@@ -1,0 +1,102 @@
+@import "./variables.scss";
+@import "./header.scss";
+@import "./footer.scss";
+@import "./main.scss";
+@import "./grid";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.btn {
+    color: rgb(96, 190, 228);
+}
+
+/*media*/
+@media screen and (max-width: 768px) {
+    
+    .contenidoPrincipal{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "titulo"
+                            "header"
+                            "main"
+                            "footer";
+    }
+    .contenidoPrincipalActividades{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "titulo"
+                            "header"
+                            "main"
+                            "footer";   
+    }
+    .menuHeader ul{
+        display: flex;
+        flex-direction: column;  
+        justify-content:center;
+        align-items: center;
+    }
+   
+    .logo{
+        margin-right: 1pw;
+    }
+
+
+    footer div h2{
+        margin-left: 80vw;    
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    
+    .contenidoPrincipal{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "titulo"
+                            "header"
+                            "main"
+                            "footer";
+    }
+
+    .contenidoPrincipalActividades{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "titulo"
+                            "header"
+                            "main"
+                            "footer";  
+    }
+
+    .menuHeader ul{
+        display: flex;
+        flex-direction: column;  
+        justify-content:center;
+        align-items: center;
+    }
+
+    .logo{
+        margin-right: 30pw;
+    
+    }
+
+    .imagenesMain{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $mainColor;
+    }
+
+    footer div h2{
+        margin-left: 80vw;    
+        font-size: 6px;
+    }
+}

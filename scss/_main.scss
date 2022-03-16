@@ -1,0 +1,74 @@
+main{
+    grid-area: main;
+}
+
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        visibility: visible;
+    }
+    100%{
+        visibility:visible
+    }
+}
+.titulosMain{
+    font-family: $mainFont;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 20px 0px 20px 0px;
+    background-color: $thirdColor;
+    animation-duration: 6s;
+    animation-name: aparecer;
+    animation-delay: 2seg;
+    filter: grayscale(1);
+
+        &titulosMain:hover{
+            transform: (1.5,1.2);
+            filter: grayscale(0);
+        }
+}
+
+.parrafosMain{
+    font-family: $mainFont;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: $thirdColor;
+}
+.carousel-item img{
+    padding: 40px 80px 10px 80px;
+    background-color: $thirdColor;
+}
+
+.contenidoMain{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.horariosMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background-color: $mainColor;
+}
+
+.imagenesGalerias{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background-color: $mainColor;
+        .imagenesGalerias img{
+            width: 35%;
+        }
+}
+
+.contenidoMain video{
+    width: 100%;
+}
