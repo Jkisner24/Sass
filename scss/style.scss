@@ -2,7 +2,7 @@
 @import "./header.scss";
 @import "./footer.scss";
 @import "./main.scss";
-@import "./grid";
+@import "./grid.scss";
 
 *{
     padding: 0;
@@ -10,10 +10,10 @@
 }
 
 .btn {
-    color: rgb(96, 190, 228);
+    color: rgb(2, 49, 110);
 }
 
-/*media*/
+/*medias*/
 @media screen and (max-width: 768px) {
     
     .contenidoPrincipal{
@@ -26,14 +26,13 @@
                             "footer";
     }
     .contenidoPrincipalActividades{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-                            "titulo"
-                            "header"
-                            "main"
-                            "footer";   
+        @extend .contenidoPrincipal;   
     }
+
+    .contenidoPrincipalHorarios{
+        @extend .contenidoPrincipal;   
+    }
+
     .menuHeader ul{
         display: flex;
         flex-direction: column;  
@@ -73,6 +72,16 @@
                             "header"
                             "main"
                             "footer";  
+    }
+
+    .contenidoPrincipalHorarios{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "titulo"
+                            "header"
+                            "main"
+                            "footer";   
     }
 
     .menuHeader ul{

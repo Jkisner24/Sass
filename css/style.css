@@ -17,7 +17,8 @@ h1 {
   width: 100%;
   background-color: #021a3d;
   background-image: linear-gradient(to top, #034079, #081f3d);
-  color: #faf5f5; }
+  color: #faf5f5;
+  margin: 0px 0px 0px 0px; }
 
 .logo {
   margin-right: 15vw; }
@@ -49,7 +50,7 @@ footer {
     text-decoration: none;
     list-style: none; }
     footer div .listaFooter li img {
-      height: 35px;
+      height: 30px;
       margin-top: 10px;
       padding: 10px 10px 0px 10px; }
 
@@ -68,12 +69,14 @@ main {
   100% {
     visibility: visible; } }
 
-.titulosMain {
+.parrafosMain, .titulosMain {
   font-family: "Poppins", sans-serif;
   text-align: center;
   color: black;
+  background-color: #faf5f5; }
+
+.titulosMain {
   padding: 20px 0px 20px 0px;
-  background-color: #faf5f5;
   animation-duration: 6s;
   animation-name: aparecer;
   animation-delay: 2seg;
@@ -82,11 +85,19 @@ main {
     transform: 1.5, 1.2;
     filter: grayscale(0); }
 
-.parrafosMain {
-  font-family: "Poppins", sans-serif;
+.titulosImg {
+  background-color: #faf5f5;
+  color: #021a3d;
   text-align: center;
-  color: black;
-  background-color: #faf5f5; }
+  font-size: "Poppins", sans-serif;
+  padding: 20px 0px 20px 0px; }
+
+.titulosVideo {
+  background-color: #021a3d;
+  color: #faf5f5;
+  font-size: "Poppins", sans-serif;
+  text-align: center;
+  padding: 20px 0px 20px 0px; }
 
 .carousel-item img {
   padding: 40px 80px 10px 80px;
@@ -98,13 +109,9 @@ main {
   align-items: stretch;
   justify-content: center; }
 
-.horariosMain {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: stretch;
-  background-color: #021a3d; }
+.videosMain {
+  padding: 0px 50px;
+  background-color: #faf5f5; }
 
 .imagenesGalerias {
   display: flex;
@@ -116,8 +123,57 @@ main {
   .imagenesGalerias .imagenesGalerias img {
     width: 35%; }
 
+.horarios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf5f5; }
+  .horarios img {
+    padding: 50px 0px 20px 0px; }
+
 .contenidoMain video {
   width: 100%; }
+
+.formContactos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #faf5f5;
+  width: 100%; }
+
+#name {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  border-radius: 2px;
+  border: none;
+  color: #021a3d;
+  box-sizing: border-box;
+  margin: 20px 0px; }
+
+#surname {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  border: none;
+  color: #021a3d;
+  box-sizing: border-box;
+  margin-bottom: 20px; }
+
+#comment {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  border: none;
+  color: #021a3d;
+  resize: none;
+  margin-bottom: 20px;
+  box-sizing: border-box; }
+
+.iframeUbicacion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly; }
 
 .contenidoPrincipalIndex {
   display: grid;
@@ -144,15 +200,11 @@ main {
   margin: 0; }
 
 .btn {
-  color: #60bee4; }
+  color: #02316e; }
 
-/*media*/
+/*medias*/
 @media screen and (max-width: 768px) {
-  .contenidoPrincipal {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "titulo" "header" "main" "footer"; }
-  .contenidoPrincipalActividades {
+  .contenidoPrincipal, .contenidoPrincipalActividades, .contenidoPrincipalHorarios {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "header" "main" "footer"; }
@@ -168,11 +220,15 @@ main {
     font-size: 12px; } }
 
 @media screen and (max-width: 320px) {
-  .contenidoPrincipal {
+  .contenidoPrincipal, .contenidoPrincipalActividades, .contenidoPrincipalHorarios {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "header" "main" "footer"; }
   .contenidoPrincipalActividades {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "header" "main" "footer"; }
+  .contenidoPrincipalHorarios {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "header" "main" "footer"; }

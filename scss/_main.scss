@@ -13,12 +13,16 @@ main{
         visibility:visible
     }
 }
-.titulosMain{
+
+.parrafosMain{
     font-family: $mainFont;
     text-align: center;
     color: rgb(0, 0, 0);
-    padding: 20px 0px 20px 0px;
     background-color: $thirdColor;
+}
+.titulosMain{
+    @extend .parrafosMain;
+    padding: 20px 0px 20px 0px;
     animation-duration: 6s;
     animation-name: aparecer;
     animation-delay: 2seg;
@@ -30,12 +34,26 @@ main{
         }
 }
 
-.parrafosMain{
-    font-family: $mainFont;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    background-color: $thirdColor;
+
+@mixin titulos($bgColor, $mainColor){
+
+    background-color: $bgColor;
+    color: $mainColor;    
 }
+
+.titulosImg{
+    @include titulos($thirdColor , $mainColor);
+    text-align: center;
+    font-size: $mainFont;
+    padding: 20px 0px 20px 0px;
+}
+.titulosVideo{
+    @include titulos($mainColor, $thirdColor);
+    font-size: $mainFont;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
 .carousel-item img{
     padding: 40px 80px 10px 80px;
     background-color: $thirdColor;
@@ -48,13 +66,9 @@ main{
     justify-content: center;
 }
 
-.horariosMain{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: stretch;
-    background-color: $mainColor;
+.videosMain{
+    padding: 0px 50px;
+    background-color: $thirdColor;
 }
 
 .imagenesGalerias{
@@ -69,6 +83,64 @@ main{
         }
 }
 
+.horarios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $thirdColor;
+
+        img{
+            padding: 50px 0px 20px 0px;
+        }
+}
+
+
 .contenidoMain video{
     width: 100%;
+}
+
+.formContactos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $thirdColor;
+    width: 100%;
+}
+
+#name{
+    font-family: $mainFont;
+    background-color: white;
+    border-radius: 2px;
+    border: none;
+    color: $mainColor;
+    box-sizing: border-box;
+    margin: 20px 0px;
+}
+
+#surname{
+    font-family: $mainFont;
+    background-color: white;
+    border: none;
+    color: $mainColor;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#comment{
+    font-family: $mainFont;
+    background-color: white;
+    border: none;
+    color: $mainColor;
+    resize: none;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.iframeUbicacion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
