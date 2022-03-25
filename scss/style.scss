@@ -45,6 +45,13 @@
     }
 
 
+    .horarios{
+        img{
+        width: 50%;
+        padding-top: 20px;
+        }
+    }
+
     footer div h2{
         margin-left: 80vw;    
         font-size: 12px;
@@ -95,13 +102,11 @@
         margin-right: 30pw;
     
     }
-
-    .imagenesMain{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: $mainColor;
+    .horarios{
+        img{
+        width: 30%;
+        padding-top: 20px;
+        }
     }
 
     footer div h2{

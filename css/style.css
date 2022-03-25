@@ -61,6 +61,7 @@ footer {
 main {
   grid-area: main; }
 
+/*aparecer*/
 @keyframes aparecer {
   0% {
     opacity: 0; }
@@ -69,6 +70,7 @@ main {
   100% {
     visibility: visible; } }
 
+/*texto*/
 .parrafosMain, .titulosMain {
   font-family: "Poppins", sans-serif;
   text-align: center;
@@ -99,47 +101,48 @@ main {
   text-align: center;
   padding: 20px 0px 20px 0px; }
 
+/*carousel*/
 .carousel-item img {
-  padding: 40px 80px 10px 80px;
+  padding: 40px 80px 20px 80px;
   background-color: #faf5f5; }
 
+/*sectionActividades*/
 .contenidoMain {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center; }
+  .contenidoMain video {
+    width: 100%; }
 
 .videosMain {
-  padding: 0px 50px;
+  padding: 0px 50px 20px 50px;
   background-color: #faf5f5; }
 
-.imagenesGalerias {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: stretch;
-  background-color: #021a3d; }
-  .imagenesGalerias .imagenesGalerias img {
-    width: 35%; }
-
-.horarios {
+.horarios, .formContactos {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: #faf5f5; }
-  .horarios img {
-    padding: 50px 0px 20px 0px; }
+  align-items: center; }
+  .horarios img, .formContactos img {
+    width: 70%;
+    padding-top: 20px; }
 
-.contenidoMain video {
-  width: 100%; }
+.redes {
+  background-color: #faf5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .redes li {
+    text-decoration: none;
+    list-style: none;
+    background-color: #faf5f5; }
+    .redes li img {
+      width: 50px; }
 
+/*formularios*/
 .formContactos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #faf5f5;
   width: 100%; }
 
@@ -152,7 +155,7 @@ main {
   box-sizing: border-box;
   margin: 20px 0px; }
 
-#surname {
+#surname, #comment {
   font-family: "Poppins", sans-serif;
   background-color: white;
   border: none;
@@ -160,15 +163,7 @@ main {
   box-sizing: border-box;
   margin-bottom: 20px; }
 
-#comment {
-  font-family: "Poppins", sans-serif;
-  background-color: white;
-  border: none;
-  color: #021a3d;
-  resize: none;
-  margin-bottom: 20px;
-  box-sizing: border-box; }
-
+/* ubicacion*/
 .iframeUbicacion {
   display: flex;
   flex-direction: row;
@@ -215,6 +210,9 @@ main {
     align-items: center; }
   .logo {
     margin-right: 1pw; }
+  .horarios img, .formContactos img {
+    width: 50%;
+    padding-top: 20px; }
   footer div h2 {
     margin-left: 80vw;
     font-size: 12px; } }
@@ -239,12 +237,9 @@ main {
     align-items: center; }
   .logo {
     margin-right: 30pw; }
-  .imagenesMain {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #021a3d; }
+  .horarios img, .formContactos img {
+    width: 30%;
+    padding-top: 20px; }
   footer div h2 {
     margin-left: 80vw;
     font-size: 6px; } }

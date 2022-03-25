@@ -1,7 +1,7 @@
 main{
     grid-area: main;
 }
-
+/*aparecer*/
 @keyframes aparecer{
     0%{
         opacity: 0;
@@ -14,6 +14,7 @@ main{
     }
 }
 
+/*texto*/
 .parrafosMain{
     font-family: $mainFont;
     text-align: center;
@@ -34,13 +35,11 @@ main{
         }
 }
 
-
 @mixin titulos($bgColor, $mainColor){
 
     background-color: $bgColor;
     color: $mainColor;    
 }
-
 .titulosImg{
     @include titulos($thirdColor , $mainColor);
     text-align: center;
@@ -54,33 +53,29 @@ main{
     padding: 20px 0px 20px 0px;
 }
 
+
+/*carousel*/
 .carousel-item img{
-    padding: 40px 80px 10px 80px;
+    padding: 40px 80px 20px 80px;
     background-color: $thirdColor;
 }
 
+/*sectionActividades*/
 .contenidoMain{
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
+
+    video{
+    width: 100%;
+    }
 }
+
 
 .videosMain{
-    padding: 0px 50px;
+    padding: 0px 50px 20px 50px;
     background-color: $thirdColor;
-}
-
-.imagenesGalerias{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: stretch;
-    background-color: $mainColor;
-        .imagenesGalerias img{
-            width: 35%;
-        }
 }
 
 .horarios{
@@ -88,23 +83,35 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    img{
+        width: 70%;
+        padding-top: 20px;
+    }
+}
+
+.redes{
     background-color: $thirdColor;
-
-        img{
-            padding: 50px 0px 20px 0px;
-        }
-}
-
-
-.contenidoMain video{
-    width: 100%;
-}
-
-.formContactos{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    li{
+        text-decoration: none;
+        list-style: none;
+        background-color: $thirdColor;
+
+        img{
+            width: 50px;
+        }
+    }   
+}
+
+
+/*formularios*/
+.formContactos{
+    @extend .horarios;
     background-color: $thirdColor;
     width: 100%;
 }
@@ -129,15 +136,10 @@ main{
 }
 
 #comment{
-    font-family: $mainFont;
-    background-color: white;
-    border: none;
-    color: $mainColor;
-    resize: none;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+    @extend #surname
 }
 
+/* ubicacion*/
 .iframeUbicacion{
     display: flex;
     flex-direction: row;
