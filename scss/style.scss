@@ -28,11 +28,16 @@
     .contenidoPrincipalActividades{
         @extend .contenidoPrincipal;   
     }
-
     .contenidoPrincipalHorarios{
         @extend .contenidoPrincipal;   
     }
-
+    .contenidoPrincipalGaleria{
+        @extend .contenidoPrincipal;   
+    }
+    .contenidoPrincipalContacto{
+        @extend .contenidoPrincipal;   
+    }
+    
     .menuHeader ul{
         display: flex;
         flex-direction: column;  
@@ -40,22 +45,17 @@
         align-items: center;
     }
    
-    .logo{
-        margin-right: 1pw;
-    }
-
-
     .horarios{
-        img{
-        width: 50%;
-        padding-top: 20px;
-        }
+        background-color: $thirdColor;
+        height: 600px;
     }
 
     footer div h2{
-        margin-left: 80vw;    
-        font-size: 12px;
-    }
+        margin-left: 80vw;  
+        color: $secondColor;
+        font-style: $mainFont;
+        font-size: 9px;
+        }
 }
 
 
@@ -70,7 +70,6 @@
                             "main"
                             "footer";
     }
-
     .contenidoPrincipalActividades{
         display: grid;
         grid-template-columns: 1fr;
@@ -80,7 +79,6 @@
                             "main"
                             "footer";  
     }
-
     .contenidoPrincipalHorarios{
         display: grid;
         grid-template-columns: 1fr;
@@ -90,27 +88,35 @@
                             "main"
                             "footer";   
     }
-
+    .contenidoPrincipalGaleria{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "titulo"
+                            "header"
+                            "main"
+                            "footer";   
+    }
+    .contenidoPrincipalContacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "titulo"
+                            "header"
+                            "main"
+                            "footer";   
+    }
     .menuHeader ul{
         display: flex;
         flex-direction: column;  
         justify-content:center;
         align-items: center;
     }
-
-    .logo{
-        margin-right: 30pw;
-    
-    }
-    .horarios{
-        img{
-        width: 30%;
-        padding-top: 20px;
-        }
-    }
-
+ 
     footer div h2{
-        margin-left: 80vw;    
-        font-size: 6px;
+        margin-left: 80vw;  
+        color: $secondColor;
+        font-style: $mainFont;
+        font-size: 7px;
     }
 }

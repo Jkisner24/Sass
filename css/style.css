@@ -1,42 +1,66 @@
 /*colores*/
 /*fuentes*/
-header {
-  grid-area: header;
-  display: flex;
+/*header{
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: $mainColor;
+}
+*/
+/*
+.menuHeader ul{
+    display: flex;
+    flex-direction: row;  
+    justify-content:space-evenly;
+    align-items: center;
+        
+        li{
+            list-style: none;
+            margin: 0 20px;
+            a{
+                font-family: $mainFont;
+                text-decoration: none;
+                color: $thirdColor;
+                    &:hover{
+                        color: $secondColor;
+                   } 
+                }         
+            }
+}
+*/
+/*bootstrap menu*/
+.navbar-collapse {
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-  background-color: #021a3d; }
+  justify-content: flex-end; }
 
 h1 {
   grid-area: titulo;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   width: 100%;
   background-color: #021a3d;
-  background-image: linear-gradient(to top, #034079, #081f3d);
+  background-image: linear-gradient(to top, #084298, #092036);
   color: #faf5f5;
-  margin: 0px 0px 0px 0px; }
+  margin: 0px 0px !important; }
 
 .logo {
-  margin-right: 15vw; }
+  margin-right: 15vw;
+  width: 50%;
+  height: 15%; }
 
-.menuHeader ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center; }
-  .menuHeader ul li {
-    list-style: none;
-    margin: 0 20px; }
-    .menuHeader ul li a {
-      font-family: "Poppins", sans-serif;
-      text-decoration: none;
-      color: #faf5f5; }
-      .menuHeader ul li a:hover {
-        color: rgba(217, 236, 245, 0.747); }
+.navbar li {
+  list-style: none;
+  margin: 0 20px; }
+  .navbar li a {
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #faf5f5; }
+    .navbar li a:hover {
+      color: rgba(217, 236, 245, 0.747); }
 
 footer {
   grid-area: footer;
@@ -56,7 +80,9 @@ footer {
 
 .copyright {
   margin-left: 80vw;
-  font-size: 18px; }
+  color: rgba(217, 236, 245, 0.747);
+  font-style: "Poppins", sans-serif;
+  font-size: 10px; }
 
 main {
   grid-area: main; }
@@ -81,11 +107,9 @@ main {
   padding: 20px 0px 20px 0px;
   animation-duration: 6s;
   animation-name: aparecer;
-  animation-delay: 2seg;
-  filter: grayscale(1); }
+  animation-delay: 2seg; }
   .titulosMaintitulosMain:hover {
-    transform: 1.5, 1.2;
-    filter: grayscale(0); }
+    transform: 1.5, 1.2; }
 
 .titulosImg {
   background-color: #faf5f5;
@@ -102,9 +126,27 @@ main {
   padding: 20px 0px 20px 0px; }
 
 /*carousel*/
-.carousel-item img {
-  padding: 40px 80px 20px 80px;
+.carousel-inner {
+  max-height: 850px;
   background-color: #faf5f5; }
+
+.carousel-item img {
+  margin: 0 auto;
+  padding-bottom: 2%; }
+
+/*galeria*/
+.imagenesGalerias {
+  display: flex;
+  justify-content: center;
+  filter: grayscale(1); }
+  .imagenesGalerias img {
+    padding: 1% 1%;
+    flex: none;
+    max-height: 30%;
+    max-width: 30%; }
+
+.imagenesGalerias:hover {
+  filter: grayscale(0); }
 
 /*sectionActividades*/
 .contenidoMain {
@@ -116,18 +158,19 @@ main {
     width: 100%; }
 
 .videosMain {
-  padding: 0px 50px 20px 50px;
-  background-color: #faf5f5; }
+  padding: 20px 100px 20px 100px;
+  background-color: #faf5f5;
+  max-height: 600px; }
 
-.horarios, .formContactos {
+.horarios {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center; }
-  .horarios img, .formContactos img {
-    width: 70%;
-    padding-top: 20px; }
+  .horarios img {
+    width: 75%; }
 
+/*redes sociales*/
 .redes {
   background-color: #faf5f5;
   display: flex;
@@ -142,53 +185,52 @@ main {
       width: 50px; }
 
 /*formularios*/
-.formContactos {
-  background-color: #faf5f5;
-  width: 100%; }
+form {
+  width: 500px;
+  margin: 50px auto; }
 
-#name {
-  font-family: "Poppins", sans-serif;
-  background-color: white;
-  border-radius: 2px;
-  border: none;
-  color: #021a3d;
-  box-sizing: border-box;
-  margin: 20px 0px; }
+.tituloForm {
+  margin-top: 20px; }
 
-#surname, #comment {
-  font-family: "Poppins", sans-serif;
-  background-color: white;
-  border: none;
-  color: #021a3d;
-  box-sizing: border-box;
-  margin-bottom: 20px; }
+input, textarea {
+  width: 100%;
+  border: 1px solid #c7d1d1; }
 
-/* ubicacion*/
+/*
+#name{
+    font-family: $mainFont;
+    background-color: white;
+    border-radius: 2px;
+    border: none;
+    color: $mainColor;
+    box-sizing: border-box;
+    margin: 20px 0px;
+}
+
+#surname{
+    font-family: $mainFont;
+    background-color: white;
+    border: none;
+    color: $mainColor;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#comment{
+    @extend #surname
+}
+*/
+/*ubicacion*/
 .iframeUbicacion {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly; }
 
-.contenidoPrincipalIndex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "titulo titulo" "header header" "main main" "footer footer"; }
-
-.contenidoPrincipalActividades {
+.contenidoPrincipalIndex, .contenidoPrincipalActividades, .contenidoPrincipalHorarios, .contenidoPrincipalGaleria, .contenidoPrincipalContacto {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "titulo" "header" "main" "footer"; }
-
-.contenidoPrincipalHorarios {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "titulo" "header" "main" "footer"; }
-
-.contenidoPrincipalGaleria {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "titulo titulo titulo" "header header header" "main main main" "footer footer footer"; }
 
 * {
   padding: 0;
@@ -199,7 +241,7 @@ main {
 
 /*medias*/
 @media screen and (max-width: 768px) {
-  .contenidoPrincipal, .contenidoPrincipalActividades, .contenidoPrincipalHorarios {
+  .contenidoPrincipal, .contenidoPrincipalActividades, .contenidoPrincipalHorarios, .contenidoPrincipalGaleria, .contenidoPrincipalContacto {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "header" "main" "footer"; }
@@ -208,17 +250,17 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-  .logo {
-    margin-right: 1pw; }
-  .horarios img, .formContactos img {
-    width: 50%;
-    padding-top: 20px; }
+  .horarios {
+    background-color: #faf5f5;
+    height: 600px; }
   footer div h2 {
     margin-left: 80vw;
-    font-size: 12px; } }
+    color: rgba(217, 236, 245, 0.747);
+    font-style: "Poppins", sans-serif;
+    font-size: 9px; } }
 
 @media screen and (max-width: 320px) {
-  .contenidoPrincipal, .contenidoPrincipalActividades, .contenidoPrincipalHorarios {
+  .contenidoPrincipal, .contenidoPrincipalActividades, .contenidoPrincipalHorarios, .contenidoPrincipalGaleria, .contenidoPrincipalContacto {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "header" "main" "footer"; }
@@ -230,16 +272,21 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "header" "main" "footer"; }
+  .contenidoPrincipalGaleria {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "header" "main" "footer"; }
+  .contenidoPrincipalContacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "header" "main" "footer"; }
   .menuHeader ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-  .logo {
-    margin-right: 30pw; }
-  .horarios img, .formContactos img {
-    width: 30%;
-    padding-top: 20px; }
   footer div h2 {
     margin-left: 80vw;
-    font-size: 6px; } }
+    color: rgba(217, 236, 245, 0.747);
+    font-style: "Poppins", sans-serif;
+    font-size: 7px; } }

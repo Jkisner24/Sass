@@ -27,11 +27,8 @@ main{
     animation-duration: 6s;
     animation-name: aparecer;
     animation-delay: 2seg;
-    filter: grayscale(1);
-
         &titulosMain:hover{
             transform: (1.5,1.2);
-            filter: grayscale(0);
         }
 }
 
@@ -55,9 +52,35 @@ main{
 
 
 /*carousel*/
-.carousel-item img{
-    padding: 40px 80px 20px 80px;
+
+.carousel-inner{
+    max-height: 850px;
     background-color: $thirdColor;
+}
+
+.carousel-item img{
+    margin: 0 auto;
+    padding-bottom: 2%;
+}
+
+
+/*galeria*/
+
+.imagenesGalerias{
+    display: flex;
+    justify-content: center;
+    filter: grayscale(1);    
+
+        img{
+            padding: 1% 1%;
+            flex: none;
+            max-height: 30%;
+            max-width: 30%;
+    }
+}
+
+.imagenesGalerias:hover{
+    filter: grayscale(0);
 }
 
 /*sectionActividades*/
@@ -72,24 +95,26 @@ main{
     }
 }
 
-
 .videosMain{
-    padding: 0px 50px 20px 50px;
+    padding: 20px 100px 20px 100px;
     background-color: $thirdColor;
+    max-height: 600px;
+    
 }
 
 .horarios{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     
     img{
-        width: 70%;
-        padding-top: 20px;
+        width: 75%;
+
     }
 }
 
+/*redes sociales*/
 .redes{
     background-color: $thirdColor;
     display: flex;
@@ -110,12 +135,26 @@ main{
 
 
 /*formularios*/
-.formContactos{
-    @extend .horarios;
-    background-color: $thirdColor;
-    width: 100%;
+form{
+    width: 500px;
+    margin: 50px auto;
 }
 
+.tituloForm{
+    margin-top: 20px;
+}
+
+
+input{
+    width: 100%;
+    border: 1px solid #c7d1d1;
+}
+
+textarea{
+    @extend input
+}
+
+/*
 #name{
     font-family: $mainFont;
     background-color: white;
@@ -138,8 +177,9 @@ main{
 #comment{
     @extend #surname
 }
+*/
 
-/* ubicacion*/
+/*ubicacion*/
 .iframeUbicacion{
     display: flex;
     flex-direction: row;

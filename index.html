@@ -16,19 +16,35 @@
 </head>
   <body>
     <div class="contenidoPrincipalIndex">
-        <h1>NOVA CLUB FIT</h1>
-        <header>
+      <h1>NOVA CLUB FIT</h1>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
             <img class="logo" src="img/Logo_preview_rev_1.png" alt="logo">
-            <nav class="menuHeader">
-                <ul>
-                    <li> <a href="index.html">Home</a></li>
-                    <li> <a href="html/Actividades.html">Actividades</a></li>
-                    <li> <a href="html/Horarios.html">Horarios</a></li>
-                    <li> <a href="html/Galeria.html">Galeria</a></li>
-                    <li> <a href="html/Contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </header> 
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" class="menuHeader" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"> 
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html/Actividades.html">Actividades</a>
+              <li class="nav-item">
+                <a class="nav-link" href="html/Horarios.html">Horarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html/Galeria.html">Galeria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html/Contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       
         <main>
             <section>
@@ -38,13 +54,13 @@
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="img/Screenshot_1.jpg" class="d-block w-100" alt="imagenCarusel">
+                    <img src="img/GimNova17-2-6.jpg" class="d-block w-75" alt="imagenCarousel">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/Screenshot_2.jpg" class="d-block w-100" alt="imagenCarusel">
+                    <img src="img/Screenshot_2.jpg" class="d-block w-75" alt="imagenCarousel">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/Screenshot_3.jpg" class="d-block w-100" alt="imagenCarusel">
+                    <img src="img/Screenshot_3.jpg" class="d-block w-75" alt="imagenCarousel">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

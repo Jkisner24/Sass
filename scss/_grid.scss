@@ -1,39 +1,25 @@
 .contenidoPrincipalIndex{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-                        "titulo titulo"
-                        "header header"
-                        "main main"
-                        "footer footer";   
+                        "titulo"
+                        "header"
+                        "main"
+                        "footer";   
 }
 
 .contenidoPrincipalActividades{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-                        "titulo"
-                        "header"
-                        "main"
-                        "footer";   
+    @extend .contenidoPrincipalIndex;   
 }
 
 .contenidoPrincipalHorarios{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-                        "titulo"
-                        "header"
-                        "main"
-                        "footer";   
+    @extend .contenidoPrincipalIndex;   
 }
 
 .contenidoPrincipalGaleria{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-                        "titulo titulo titulo"
-                        "header header header"
-                        "main main main"
-                        "footer footer footer"  
+    @extend .contenidoPrincipalIndex;
+}
+
+.contenidoPrincipalContacto{
+    @extend .contenidoPrincipalIndex;
 }
