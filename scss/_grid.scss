@@ -1,4 +1,4 @@
-.contenidoPrincipalIndex{
+.contenidoPrincipal{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -8,18 +8,3 @@
                         "footer";   
 }
 
-.contenidoPrincipalActividades{
-    @extend .contenidoPrincipalIndex;   
-}
-
-.contenidoPrincipalHorarios{
-    @extend .contenidoPrincipalIndex;   
-}
-
-.contenidoPrincipalGaleria{
-    @extend .contenidoPrincipalIndex;
-}
-
-.contenidoPrincipalContacto{
-    @extend .contenidoPrincipalIndex;
-}

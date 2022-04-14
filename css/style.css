@@ -33,10 +33,6 @@
 }
 */
 /*bootstrap menu*/
-.navbar-collapse {
-  flex-direction: row;
-  justify-content: flex-end; }
-
 h1 {
   grid-area: titulo;
   text-align: center;
@@ -46,6 +42,13 @@ h1 {
   background-image: linear-gradient(to top, #084298, #092036);
   color: #faf5f5;
   margin: 0px 0px !important; }
+
+nav {
+  grid-area: header; }
+
+.navbar-collapse {
+  flex-direction: row;
+  justify-content: flex-end; }
 
 .logo {
   margin-right: 15vw;
@@ -186,7 +189,7 @@ main {
 
 /*formularios*/
 form {
-  width: 500px;
+  width: 75%;
   margin: 50px auto; }
 
 .tituloForm {
@@ -223,11 +226,11 @@ input, textarea {
 /*ubicacion*/
 .iframeUbicacion {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: center; }
 
-.contenidoPrincipalIndex, .contenidoPrincipalActividades, .contenidoPrincipalHorarios, .contenidoPrincipalGaleria, .contenidoPrincipalContacto {
+.contenidoPrincipal {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "titulo" "header" "main" "footer"; }
@@ -241,50 +244,55 @@ input, textarea {
 
 /*medias*/
 @media screen and (max-width: 768px) {
-  .contenidoPrincipal, .contenidoPrincipalActividades, .contenidoPrincipalHorarios, .contenidoPrincipalGaleria, .contenidoPrincipalContacto {
+  .contenidoPrincipal {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "titulo" "header" "main" "footer"; }
-  .menuHeader ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+  form {
+    max-width: 75%;
+    margin: 50px auto; }
   .horarios {
-    background-color: #faf5f5;
-    height: 600px; }
+    background-color: #faf5f5; }
   footer div h2 {
     margin-left: 80vw;
     color: rgba(217, 236, 245, 0.747);
     font-style: "Poppins", sans-serif;
-    font-size: 9px; } }
-
-@media screen and (max-width: 320px) {
-  .contenidoPrincipal, .contenidoPrincipalActividades, .contenidoPrincipalHorarios, .contenidoPrincipalGaleria, .contenidoPrincipalContacto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "titulo" "header" "main" "footer"; }
-  .contenidoPrincipalActividades {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "titulo" "header" "main" "footer"; }
-  .contenidoPrincipalHorarios {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "titulo" "header" "main" "footer"; }
-  .contenidoPrincipalGaleria {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "titulo" "header" "main" "footer"; }
-  .contenidoPrincipalContacto {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "titulo" "header" "main" "footer"; }
-  .menuHeader ul {
+    font-size: 9px; }
+  .imagenesGalerias {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    filter: grayscale(1); }
+    .imagenesGalerias img {
+      padding: 1% 1%;
+      flex: none;
+      max-height: 30%;
+      max-width: 75%; }
+  .imagenesGalerias:hover {
+    filter: grayscale(0); } }
+
+@media screen and (max-width: 320px) {
+  .contenidoPrincipal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "titulo" "header" "main" "footer"; }
+  .imagenesGalerias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(1); }
+    .imagenesGalerias img {
+      padding: 1% 1%;
+      flex: none;
+      max-height: 30%;
+      max-width: 75%; }
+  .imagenesGalerias:hover {
+    filter: grayscale(0); }
+  form {
+    max-width: 75%;
+    margin: 50px auto; }
   footer div h2 {
     margin-left: 80vw;
     color: rgba(217, 236, 245, 0.747);

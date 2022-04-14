@@ -98,8 +98,7 @@ main{
 .videosMain{
     padding: 20px 100px 20px 100px;
     background-color: $thirdColor;
-    max-height: 600px;
-    
+    max-height: 600px;  
 }
 
 .horarios{
@@ -136,7 +135,7 @@ main{
 
 /*formularios*/
 form{
-    width: 500px;
+    width: 75%;
     margin: 50px auto;
 }
 
@@ -182,7 +181,7 @@ textarea{
 /*ubicacion*/
 .iframeUbicacion{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }

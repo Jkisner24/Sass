@@ -36,12 +36,6 @@
 
 /*bootstrap menu*/
 
-.navbar-collapse{
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-
 h1{
     grid-area: titulo;
     text-align: center;
@@ -51,6 +45,13 @@ h1{
     background-image: linear-gradient(to top, $sixthColor, $fourthColor);
     color: $thirdColor;
     margin: 0px 0px!important;
+}
+nav{
+    grid-area: header;
+}
+.navbar-collapse{
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .logo{
